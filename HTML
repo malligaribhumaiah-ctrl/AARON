@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Dooora ❤️</title>
+
+<style>
+/* PART 2 CSS WILL GO HERE */
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+<section id="section1" class="page active">
+    <div class="container">
+        <h1 class="main-title">Happy Birthday, Dooora! ❤️</h1>
+
+        <p class="subtitle">
+            Today is all about celebrating you and the joy you bring to my life.
+        </p>
+
+        <div class="hearts">
+            💖 ❤️ 💕 💗
+        </div>
+
+        <button onclick="startCelebration()">
+            Start the Celebration 🚀
+        </button>
+    </div>
+</section>
+
+<!-- SECTION 2 -->
+<section id="section2" class="page">
+    <div class="container">
+        <h1>✨ Preparing Your Surprise... ✨</h1>
+
+        <div class="loader"></div>
+
+        <h2 id="countdown">5</h2>
+    </div>
+</section>
+
+<!-- SECTION 3 -->
+<section id="section3" class="page">
+    <div class="container">
+        <h1>🎁 Are You Ready For Your Surprise?</h1>
+
+        <p>A special birthday surprise is waiting for you ❤️</p>
+
+        <div class="buttons">
+            <button onclick="showCake()">YES ❤️</button>
+            <button onclick="noClicked()">NO 😄</button>
+        </div>
+
+        <div id="noMessage"></div>
+    </div>
+</section>
+
+<!-- SECTION 4 -->
+<section id="section4" class="page">
+    <div class="container">
+
+        <h1>🎂 Birthday Celebrations! 🎉</h1>
+
+        <audio id="birthdaySong" src="happy-birthday.mp3"></audio>
+        <audio id="sliceSound" src="slice.mp3"></audio>
+
+        <div id="cake" onclick="sliceCake()">
+            🎂
+        </div>
+
+        <p>Tap the cake to cut it ✨</p>
+
+        <div id="cakeMessage"></div>
+
+    </div>
+</section>
+
+<!-- SECTION 5 -->
+<section id="section5" class="page">
+
+    <div class="container">
+
+        <div class="photo-container">
+
+            <img src="photo1.jpg" class="photo">
+
+            <img src="photo2.jpg" class="photo">
+
+        </div>
+
+        <h1>✨ A Little Wish For You ✨</h1>
+
+        <p class="wish-text">
+
+            On your special day, I wish that every dream you hold close to your heart finds its way to reality.
+            May your journey be filled with happiness, success, beautiful memories, and endless opportunities.
+            Keep believing in yourself, because you have the strength to achieve amazing things.
+            May every step you take bring you closer to the future you dream of, and may your life always be filled with smiles, love, and joy. ❤️
+
+        </p>
+
+        <button onclick="showFinal()">
+            Continue ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- SECTION 6 -->
+<section id="section6" class="page night">
+
+    <div class="moon"></div>
+
+    <div class="glass-card">
+
+        <h2>
+            The world just got luckier since...
+        </h2>
+
+        <div class="counter">
+
+            <div>
+                <span id="days">0</span>
+                <small>Days</small>
+            </div>
+
+            <div>
+                <span id="hours">0</span>
+                <small>Hours</small>
+            </div>
+
+            <div>
+                <span id="minutes">0</span>
+                <small>Minutes</small>
+            </div>
+
+            <div>
+                <span id="seconds">0</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <div id="finalMessage">
+            ❤️ Happy Birthday Dooora ❤️
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+/* PART 3 JAVASCRIPT WILL GO HERE */
+</script>
+
+</body>
+</html>
