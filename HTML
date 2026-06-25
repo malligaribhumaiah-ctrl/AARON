@@ -340,7 +340,131 @@ height:auto;
 </section>
 
 <script>
-/* PART 3 JAVASCRIPT WILL GO HERE */
+function showSection(id){
+document.querySelectorAll('.page').forEach(page=>{
+page.classList.remove('active');
+});
+document.getElementById(id).classList.add('active');
+}
+
+function startCelebration(){
+
+showSection('section2');
+
+let count = 5;
+
+let timer = setInterval(()=>{
+
+count--;
+
+document.getElementById('countdown').innerText = count;
+
+if(count<=0){
+clearInterval(timer);
+showSection('section3');
+}
+
+},1000);
+
+}
+
+function noClicked(){
+
+document.getElementById('noMessage').innerHTML=
+"🎆 Come on! You can't skip a birthday surprise! ❤️";
+
+setTimeout(()=>{
+document.getElementById('noMessage').innerHTML="";
+},3000);
+
+}
+
+function showCake(){
+
+showSection('section4');
+
+const song = document.getElementById('birthdaySong');
+
+song.play().catch(()=>{});
+
+}
+
+let cakeCuts = 0;
+
+function sliceCake(){
+
+cakeCuts++;
+
+const slice = document.getElementById('sliceSound');
+
+slice.play().catch(()=>{});
+
+const cake = document.getElementById('cake');
+
+if(cakeCuts==1){
+cake.innerHTML="🍰";
+}
+
+if(cakeCuts==2){
+cake.innerHTML="🍰 🍰";
+}
+
+if(cakeCuts==3){
+
+cake.innerHTML="🍰 🍰 🍰";
+
+document.getElementById('cakeMessage').innerHTML=
+"🎉 Great Job! Let's continue the celebration...";
+
+document.getElementById('birthdaySong').pause();
+
+setTimeout(()=>{
+showSection('section5');
+},3000);
+
+}
+
+}
+
+function showFinal(){
+
+showSection('section6');
+
+startCounter();
+
+}
+
+function startCounter(){
+
+const dob = new Date("2011-07-02T00:00:00");
+
+setInterval(()=>{
+
+const now = new Date();
+
+const diff = now - dob;
+
+const days = Math.floor(diff/(1000*60*60*24));
+
+const hours = Math.floor(
+(diff%(1000*60*60*24))/(1000*60*60)
+);
+
+const minutes = Math.floor(
+(diff%(1000*60*60))/(1000*60)
+);
+
+const seconds = Math.floor(
+(diff%(1000*60))/1000
+);
+
+document.getElementById('days').innerText=days;
+document.getElementById('hours').innerText=hours;
+document.getElementById('minutes').innerText=minutes;
+document.getElementById('seconds').innerText=seconds;
+
+},1000);
+
 </script>
 
 </body>
