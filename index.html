@@ -62,6 +62,17 @@ background:#ffd6e7;
 font-size:3rem;
 color:#ff2e63;
 margin-bottom:20px;
+text-shadow:0 0 15px rgba(255,46,99,.5);
+animation:titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow{
+from{
+text-shadow:0 0 10px rgba(255,46,99,.4);
+}
+to{
+text-shadow:0 0 25px rgba(255,46,99,.9);
+}
 }
 
 .subtitle{
@@ -72,8 +83,27 @@ margin-bottom:20px;
 
 .hearts{
 font-size:2rem;
-animation:float 2s infinite;
 margin-bottom:25px;
+display:inline-block;
+animation:heartFloat 3s ease-in-out infinite;
+}
+
+@keyframes heartFloat{
+0%{
+transform:translateY(0px);
+}
+25%{
+transform:translateY(-8px);
+}
+50%{
+transform:translateY(-15px);
+}
+75%{
+transform:translateY(-8px);
+}
+100%{
+transform:translateY(0px);
+}
 }
 
 @keyframes float{
@@ -83,14 +113,21 @@ margin-bottom:25px;
 }
 
 button{
-padding:15px 30px;
+padding:15px 35px;
 border:none;
-border-radius:30px;
+border-radius:40px;
 font-size:18px;
 cursor:pointer;
 background:#ff2e63;
 color:white;
 margin:10px;
+transition:all .3s ease;
+box-shadow:0 5px 20px rgba(255,46,99,.4);
+}
+
+button:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 10px 25px rgba(255,46,99,.6);
 }
 
 #section2{
