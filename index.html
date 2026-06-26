@@ -418,7 +418,7 @@ opacity:0.8;
 
     <img id="cakeImg" src="cake.png" alt="Cake">
 
-    <img id="knife" src="knife.png" alt="Knife">
+   <img id="knife" src="knife.png" alt="Knife" draggable="false">
 
 </div>
 
@@ -654,6 +654,54 @@ document.getElementById('seconds').innerText=seconds;
 
 }
 
+const knife = document.getElementById("knife");
+const cakeImg = document.getElementById("cakeImg");
+
+let dragging = false;
+let cakeCut = false;
+
+knife.addEventListener("pointerdown", function () {
+    dragging = true;
+});
+
+document.addEventListener("pointerup", function () {
+    dragging = false;
+});
+
+document.addEventListener("pointermove", function (e) {
+
+    if (!dragging || cakeCut) return;
+
+    const cakeArea = document.getElementById("cakeArea");
+    const rect = cakeArea.getBoundingClientRect();
+
+    let x = e.clientX - rect.left - 60;
+
+    if (x < -120) x = -120;
+    if (x > 320) x = 320;
+
+    knife.style.left = x + "px";
+
+    if (x > 170) {
+
+        cakeCut = true;
+
+        cakeImg.src = "cake-cut.png";
+
+        document.getElementById("cakeMessage").innerHTML =
+        "🎉 Happy Birthday!";
+
+        const slice = document.getElementById("sliceSound");
+        slice.play().catch(()=>{});
+
+        setTimeout(()=>{
+            showSection("section5");
+        },3000);
+
+    }
+
+});
+    
 </script>
 
 </body>
