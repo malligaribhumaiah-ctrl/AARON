@@ -157,11 +157,46 @@ font-size:4rem;
 background:#ffeef5;
 }
 
-#cake{
-font-size:120px;
-cursor:pointer;
-transition:.5s;
-margin:20px;
+#cakeArea{
+position:relative;
+width:500px;
+height:420px;
+margin:30px auto;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+#cakeImg{
+width:100%;
+max-width:450px;
+user-select:none;
+pointer-events:none;
+transition:0.6s;
+}
+
+#knife{
+position:absolute;
+top:80px;
+left:-140px;
+width:160px;
+cursor:grab;
+transition:left 0.1s linear, transform 0.2s;
+z-index:20;
+user-select:none;
+}
+
+#knife:active{
+cursor:grabbing;
+transform:scale(1.05);
+}
+
+#cakeMessage{
+margin-top:20px;
+font-size:24px;
+color:white;
+font-weight:bold;
 }
 
 .photo-container{
@@ -240,6 +275,7 @@ font-size:2rem;
 }
 
 @media(max-width:768px){
+
 .main-title{
 font-size:2rem;
 }
@@ -248,6 +284,21 @@ font-size:2rem;
 width:90%;
 height:auto;
 }
+
+#cakeArea{
+width:95%;
+height:300px;
+}
+
+#cakeImg{
+max-width:300px;
+}
+
+#knife{
+width:110px;
+top:50px;
+}
+
 }
 
 @keyframes moonGlow{
