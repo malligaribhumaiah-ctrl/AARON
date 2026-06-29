@@ -438,17 +438,22 @@ opacity:0.8;
         <audio id="birthdaySong" src="happy-birthday.mp3"></audio>
         <audio id="sliceSound" src="slice.mp3"></audio>
 
-        <div id="cakeArea">
+        <div class="cake-container">
+  <div class="cake" id="birthdayCake">
+    <!-- The physical cake layers -->
+    <div class="candle"></div>
+    <div class="top-layer"></div>
+    <div class="bottom-layer"></div>
 
-    <img id="cakeImg" src="cake.png" alt="Cake">
+    <!-- The slice lines (hidden by default) -->
+    <div class="slice-line line-v"></div>
+    <div class="slice-line line-h"></div>
+  </div>
 
-   <img id="knife" src="knife.png" alt="Knife" draggable="false">
-
+  <button class="slice-btn" onclick="sliceCake()">
+    Slice the Cake! 🎂
+  </button>
 </div>
-
-<p>Drag the knife across the cake to cut it 🔪</p>
-
-<div id="cakeMessage"></div>
 
     </div>
 </section>
