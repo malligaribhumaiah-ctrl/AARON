@@ -720,19 +720,27 @@ song.play().catch(()=>{});
 
 let cakeCuts = 0;
 
-function sliceCake(){
+function sliceCake() {
+  const cake = document.getElementById('birthdayCake');
+  cake.classList.add('sliced');
 
-cakeCuts++;
+  const btn = document.querySelector('.slice-btn');
+  btn.innerText = "Enjoy your cake! 😋";
+  btn.disabled = true;
+  btn.style.opacity = "0.7";
 
-const slice = document.getElementById('sliceSound');
+  // Play slice sound
+  document.getElementById("sliceSound").play().catch(()=>{});
 
-slice.play().catch(()=>{});
+  // Stop birthday song
+  document.getElementById("birthdaySong").pause();
 
-const cake = document.getElementById('cake');
-
-if(cakeCuts==1){
-cake.innerHTML="🍰";
+  // Go to next section after 3 seconds
+  setTimeout(() => {
+    showSection("section5");
+  }, 3000);
 }
+   
 
 if(cakeCuts==2){
 cake.innerHTML="🍰 🍰";
