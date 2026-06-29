@@ -349,33 +349,33 @@ opacity:0.8;
 }
 
 @keyframes twinkle{
-...
+
 }
 
 @keyframes moonGlow{
-...
-}
 
+}   
+    
 /* PASTE THE NEW CSS HERE */
 
 .premium-title{
-...
+
 }
 
 .premium-text{
-...
+
 }
 
 .signature{
-...
+
 }
 
 @keyframes fadeUp{
-...
+
 }
 
 @keyframes glowSignature{
-...
+
 }
 /* ================= CAKE ANIMATION ================= */
 
@@ -642,7 +642,7 @@ opacity:0.8;
 </section>
 
 <!-- SECTION 6 -->
-<section id="section6" class="page night">f
+<section id="section6" class="page night">
 
 <div class="stars"></div>
 
@@ -704,7 +704,10 @@ With Lots of Love ❤️
 
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 <script>
+
 function showSection(id){
 document.querySelectorAll('.page').forEach(page=>{
 page.classList.remove('active');
@@ -843,23 +846,6 @@ setInterval(() => {
 
     // Your existing JavaScript
 
-const slides = document.querySelectorAll(".slide");
-
-let currentSlide = 0;
-
-setInterval(() => {
-
-    slides[currentSlide].classList.remove("active");
-
-    currentSlide++;
-
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
-
-    slides[currentSlide].classList.add("active");
-
-}, 3000);
 
 
 /* ================= PARTICLE BACKGROUND ================= */
@@ -890,10 +876,30 @@ function createParticles() {
 
 window.addEventListener('DOMContentLoaded', createParticles);
 
-</script>
+    // Fires confetti instantly when the page loads, and whenever they click the screen
+window.addEventListener('DOMContentLoaded', () => {
+    // Initial burst
+    setTimeout(() => {
+        confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+    }, 1000);
+});
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+window.addEventListener('click', () => {
+    confetti({
+        particleCount: 50,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+    });
+    confetti({
+        particleCount: 50,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+    });
+});
+
+</script>
 
 </body>
 </html>
-
