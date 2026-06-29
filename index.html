@@ -377,7 +377,115 @@ opacity:0.8;
 @keyframes glowSignature{
 ...
 }
+/* ================= CAKE ANIMATION ================= */
 
+.cake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.cake {
+  position: relative;
+  width: 150px;
+  height: 120px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Cake Layers */
+.top-layer {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  width: 130px;
+  height: 40px;
+  background: #ff8da1;
+  border-radius: 10px 10px 0 0;
+}
+
+.bottom-layer {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  height: 50px;
+  background: #f76c83;
+  border-radius: 5px 5px 10px 10px;
+}
+
+/* Candle */
+.candle {
+  position: absolute;
+  top: 10px;
+  left: 71px;
+  width: 8px;
+  height: 25px;
+  background: white;
+  border-radius: 3px;
+}
+
+.candle::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 1px;
+  width: 6px;
+  height: 8px;
+  background: gold;
+  border-radius: 50%;
+}
+
+/* Slice Lines */
+.slice-line {
+  position: absolute;
+  background: white;
+  opacity: 0;
+  transition: all .5s ease;
+  z-index: 5;
+}
+
+.line-v {
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 0%;
+  transform: translateX(-50%);
+}
+
+.line-h {
+  top: 60%;
+  left: 0;
+  width: 0%;
+  height: 3px;
+}
+
+.cake.sliced .line-v {
+  height: 100%;
+  opacity: 1;
+}
+
+.cake.sliced .line-h {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Button */
+.slice-btn {
+  padding: 12px 25px;
+  background: #ff2e63;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slice-btn:hover {
+  transform: scale(1.08);
+}
+    
 </style>
 </head>
 
