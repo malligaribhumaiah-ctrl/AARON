@@ -265,11 +265,15 @@ animation:moonGlow 4s ease-in-out infinite alternate;
 
 .glass-card{
 background:rgba(255,255,255,.1);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
 padding:40px;
 border-radius:20px;
 max-width:700px;
 width:90%;
+border:1px solid rgba(255,255,255,0.12);
+box-shadow:0 0 30px rgba(255,192,203,0.25),
+           inset 0 0 15px rgba(255,255,255,0.05);
 }
 
 .counter{
@@ -519,6 +523,25 @@ opacity:0.8;
         transform: translateY(-10vh) scale(1);
         opacity: 0;
     }
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(10, 15, 30, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff758c;
 }
 
 </style>
