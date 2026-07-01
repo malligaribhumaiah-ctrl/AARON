@@ -16,7 +16,7 @@ box-sizing:border-box;
 body{
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
                       url("background2.jpg");
-    background-size: cover;
+    background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -75,7 +75,11 @@ margin:auto;
 }
 
 #section1{
-background:#ffd6e7;
+    background-image: url("background1.jpg");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .main-title{
@@ -151,8 +155,12 @@ box-shadow:0 10px 25px rgba(255,46,99,.6);
 }
 
 #section2{
-background:#111;
-color:white;
+    background-image: url("background2.jpg");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
 .loader{
@@ -174,7 +182,12 @@ font-size:4rem;
 }
 
 #section3{
-background:#ffeef5;
+    background-image: url("background3.jpg");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
 #cakeArea{
@@ -652,35 +665,30 @@ opacity:0.8;
 
     <div class="container">
 
-        <div class="photo-container">
+      <div class="photo-container">
 
-            <div class="photo-slider">
+    <h1>✨ A Little Wish For You ✨</h1>
 
-    <img src="photo11.jpg" class="slide active">
-    <img src="photo22.jpg" class="slide">
-    <img src="photo33.jpg" class="slide">
-    <img src="photo44.jpg" class="slide">
-    <img src="photo55.jpg" class="slide">
-   
- 
-        </div>
-
-        <h1>✨ A Little Wish For You ✨</h1>
-
-        <p class="wish-text">
-
-            On your special day, I wish that every dream you hold close to your heart finds its way to reality.
-            May your journey be filled with happiness, success, beautiful memories, and endless opportunities.
-            Keep believing in yourself, because you have the strength to achieve amazing things.
-            May every step you take bring you closer to the future you dream of, and may your life always be filled with smiles, love, and joy. ❤️
-
-        </p>
-
-        <button onclick="showFinal()">
-            Continue ❤️
-        </button>
-
+    <div class="photo-slider">
+        <img src="photo11.jpg" class="slide active">
+        <img src="photo22.jpg" class="slide">
+        <img src="photo33.jpg" class="slide">
+        <img src="photo44.jpg" class="slide">
+        <img src="photo55.jpg" class="slide">
     </div>
+
+    <p class="wish-text">
+        On your special day, I wish that every dream you hold close to your heart finds its way to reality.
+        May your journey be filled with happiness, success, beautiful memories, and endless opportunities.
+        Keep believing in yourself, because you have the strength to achieve amazing things.
+        May every step you take bring you closer to the future you dream of, and may your life always be filled with smiles, love, and joy. ❤️
+    </p>
+
+    <button onclick="showFinal()">
+        Continue ❤️
+    </button>
+
+</div>
 
 </section>
 
